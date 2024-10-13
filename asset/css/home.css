@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: pink;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.logo{
+    width: 80px;
+    height:auto;
+    padding: 10px;
+    margin: 5px 20px;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline;
+}
+
+.left-nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px;
+}
+
+.right-nav {
+    align-self: flex-end;
+}
+.right-nav ul li button{
+    display: inline;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.right-nav ul li button:hover{
+    background-color: #f1f1f1;
+}
+
+.right-nav ul li button:focus{
+    outline: none;
+}
+
+.btn-favour-room a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 20px;
+}
+
+.btn-favour-room img{
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
