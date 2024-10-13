@@ -3,71 +3,100 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 header{
-    background-color: pink;
     display: flex;
+    justify-content: center;
+    background-color: white;
     width: 100%;
-    height: fit-content;
+    height: 60px;
+    font-weight:300;
 }
 
+.header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+}
 .logo{
-    width: 80px;
+    width: 60px;
     height:auto;
-    padding: 10px;
-    margin: 5px 20px;
-
+    cursor: pointer;
 }
 nav{
+    height: 60px;
     display: flex;
+    align-items: center;
+    width: 100%;
     justify-content: space-between;
+    margin-left: 30px;
 }
 
 nav ul{
     list-style: none;
+    height: 100%;
 }
 
-nav ul li{
-    display: inline;
+nav ul li a{
+    height: 100%;
+    margin: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
+ul li a:hover{
+    background-color: #f2f2f1;
+}
+
+.left-nav{
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.left-nav ul{
+    display: flex;
+}
 .left-nav ul li a{
+
     text-decoration: none;
     color: #000000;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
-.right-nav {
-    align-self: flex-end;
-}
-.right-nav ul li button{
-    display: inline;
-    background-color: #ffffff;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
+.right-nav{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.right-nav ul li button:hover{
-    background-color: #f1f1f1;
+.right-nav ul{
+    display: flex;
 }
 
 .right-nav ul li button:focus{
     outline: none;
 }
 
-.btn-favour-room a{
+.right-nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: inherit;
-    padding: 10px 20px;
 }
 
-.btn-favour-room img{
-    width: 20px;
+.right-nav ul li img{
+    width: 15px;
     height: auto;
     margin-right: 10px;
 }
