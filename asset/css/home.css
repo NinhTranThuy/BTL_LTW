@@ -6,6 +6,7 @@
     scroll-behavior: smooth;
 }
 
+/* Header */
 header{
     display: flex;
     justify-content: center;
@@ -49,9 +50,10 @@ nav ul li a{
     justify-content: center;
     text-align: center;
     width: 100%;
+    transition: background-color 0.3s ease-in-out;
 }
 
-ul li a:hover{
+ul .hover-effect :hover{
     background-color: #f2f2f1;
 }
 
@@ -101,3 +103,73 @@ ul li a:hover{
     margin-right: 10px;
 }
 
+/* Main */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: pink;
+}
+
+.main{
+    width: 75%;
+}
+
+/* Footer */
+footer{
+    background-color: #171717;
+    color: white;
+    width: 100%;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.footer-detail{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.col-descrip{
+    margin: 0 100px;
+}
+
+footer h4,p{
+    margin: 10px;
+}
+
+.col-descrip img{
+    width: 100px;
+}
+
+.col-link{
+    margin: 0 100px;
+}
+
+.col-link ul{
+    list-style: none;
+    margin: 10px;
+}
+
+.footer-mark{
+    margin-top: 10px;
+}
+
+.col-link .footer-mark a{
+    text-decoration: none;
+    color: white;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.col-link .footer-mark a:hover {
+   font-size: 18px;
+}
+
+footer>p{
+    margin: 20px 0;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+}
