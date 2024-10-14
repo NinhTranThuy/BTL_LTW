@@ -105,16 +105,79 @@ ul .hover-effect :hover{
 
 /* Main */
 main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     background-color: pink;
 }
 
-.main{
-    width: 75%;
+/* Search bar */
+.search-bar-section{
+    background-color: #f2f2f1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
+
+.container{
+    width: 75%;
+    padding: 60px 0;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 40px 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.search-bar > * {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.search-destination{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.search-destination img{
+    width: 25px;
+    height: auto;
+    margin:10px;
+    background-color: transparent;
+    color:white;
+}
+
+.search-destination:hover{
+    background-color: #f2f2f1;
+}
+.seach-area{
+    display: flex;
+    flex-direction: column;
+}
+
+.seach-area label{
+    font-size: 14px;
+    font-weight: regular;
+}
+.seach-area input{
+    border: none;
+    background-color: transparent;
+}
+
+
 
 /* Footer */
 footer{
@@ -128,12 +191,8 @@ footer{
 .footer-detail{
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items: center;
-}
-
-.col-descrip{
-    margin: 0 100px;
 }
 
 footer h4,p{
