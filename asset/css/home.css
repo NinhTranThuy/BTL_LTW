@@ -106,12 +106,12 @@ ul .hover-effect :hover{
 /* Main */
 main{
     width: 100%;
-    background-color: pink;
+    background-color: white;
 }
 
 /* Search bar */
 .search-bar-section{
-    background-color: #f2f2f1;
+    background-color: #f7f7f7;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -257,7 +257,6 @@ fieldset button{
     align-items: center;
     text-align: start;
     width: 100%;
-    padding: 5px;
     border: none;
     background-color: transparent;
 }
@@ -291,6 +290,125 @@ fieldset button{
     font-size: 16px;
 
 }
+
+/* Section */
+section{
+    margin: 15px 0;
+}
+/* Trending */
+.trending{
+    width: 75%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.title{
+    margin: 15px 0;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.room-container{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 1px 20px 0;
+    transition: ease-in-out 0.15s;
+    background-color: white;    
+}
+
+.room-container:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+    .room-container .room-title{
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+}
+
+    .room-container .img-heart{
+        position: absolute;
+        width: 20px;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+        filter:invert(1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .room-container .room-ava{
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .room-container .room-detail{
+        flex: 1;
+        display: flex;
+        padding:5px 15px 15px 15px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .room-container .room-detail .address{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+            .address img{
+                width: 15px;
+            }
+
+        .room-container .room-detail .price{
+            text-align: end;
+            flex: 1;
+            margin-top: auto;
+        }
+
+            .price #discount{
+                color:#757575;
+                text-decoration: line-through;
+                margin: 0;
+            }
+
+            .price #cost{
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+        .btn-view-more{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:transparent;
+            border: #ffc60a 1.5px solid;
+            color: black;
+            width: 20%;
+            margin: auto;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .btn-view-more:hover{
+            background-color: #ffc60a;
+            color: black;
+        }
+
 /* Footer */
 footer{
     background-color: #171717;
@@ -298,6 +416,7 @@ footer{
     width: 100%;
     font-weight: 300;
     font-size: 14px;
+    margin: 0;
 }
 
 .footer-detail{
@@ -307,8 +426,8 @@ footer{
     align-items: center;
 }
 
-footer h4,p{
-    margin: 10px;
+.main h1, h3, p{
+    margin: 5px 0;
 }
 
 .col-descrip img{
@@ -331,7 +450,7 @@ footer h4,p{
 .col-link .footer-mark a{
     text-decoration: none;
     color: white;
-    transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.2s ease-in-out;
 }
 
 .col-link .footer-mark a:hover {
