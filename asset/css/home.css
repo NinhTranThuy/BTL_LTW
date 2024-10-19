@@ -134,7 +134,7 @@ main{
     border-radius: 15px;
     padding: 5px;
     margin: 40px 0;
-    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    box-shadow: 0 0 50px rgba(0,0,0,0.115);
     flex-wrap:wrap;
 }
 
@@ -292,17 +292,24 @@ fieldset button{
 }
 
 /* Section */
-section{
-    margin: 15px 0;
+
+.list-room.flash-sale{
+    background-color: #ffebf0;
+    width: 100%;
 }
-/* Trending */
-.trending{
+
+.list-room > div {
     width: 75%;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
 }
-
+/*Flash Sale*/
+.list-room.flash-sale .flash-sale-icon{
+    display: block;
+    width: 200px;
+}
+/* Trending */
 .title{
     margin: 15px 0;
 }
@@ -317,13 +324,14 @@ section{
 .room-container{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 24%;
-    height: 300px;
+    height: 360px;
     border-radius: 10px;
     position: relative;
-    margin: 0 1px 20px 0;
     transition: ease-in-out 0.15s;
-    background-color: white;    
+    background-color: white;
+    overflow: hidden;    
 }
 
 .room-container:hover{
@@ -336,7 +344,10 @@ section{
         margin: 0;
 }
 
-    .room-container .img-heart{
+    .ava{
+        position: relative;
+    }
+    .ava .img-heart{
         position: absolute;
         width: 20px;
         top: 20px;
@@ -346,16 +357,43 @@ section{
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    .room-container .room-ava{
+    .list-room.flash-sale .sale{
+        position: absolute;
+        background-color: #ffc60a;
+        color: black;
+        font-weight: bold;
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        top: -35px;
+        left: -35px;
+        display: flex;
+        justify-content:center;
+        text-align:center;
+
+    }
+
+    .list-room.flash-sale .sale .text{
+        position: absolute;
+        right: 0;
+        bottom: 0; 
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 70%;
+        height: 50%;
+
+    }
+    .ava .room-ava{
         border-radius: 10px 10px 0 0;
         width: 100%;
-        height: 150px;
+        height: 170px;
         object-fit: cover;
     }
     .room-container .room-detail{
         flex: 1;
         display: flex;
-        padding:5px 15px 15px 15px;
+        padding: 5px 15px 15px 15px;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -368,16 +406,20 @@ section{
 
             .address img{
                 width: 15px;
+                margin-right: 10px;
             }
 
         .room-container .room-detail .price{
             text-align: end;
-            flex: 1;
             margin-top: auto;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
             .price #discount{
-                color:#757575;
+                color:#a3a3a3;
                 text-decoration: line-through;
                 margin: 0;
             }
@@ -396,7 +438,7 @@ section{
             border: #ffc60a 1.5px solid;
             color: black;
             width: 20%;
-            margin: auto;
+            margin: 20px auto;
             border-radius: 10px;
             padding: 10px;
             cursor: pointer;
