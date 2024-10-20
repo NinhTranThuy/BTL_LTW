@@ -16,7 +16,7 @@
                     <ul>
                         <li class="hover-effect"><a href="#">Trang chủ</a></li>
                         <li class="hover-effect"><a href="#">Blog</a></li>
-                        <li class="hover-effect"><a href="#footer">Về chúng tôi</a></li>
+                        <li class="hover-effect"><a href="#">Về chúng tôi</a></li>
                     </ul>
                 </div>
     
@@ -29,7 +29,8 @@
                             </a>
                         </li>
                         <li class="btn-signin hover-effect">
-                            <a href="#">
+                            <p id="account" class = "account">User</p>
+                            <a id="sign-in" class="sign-in" href="#">
                                 <img src="/asset/img/icon/user-regular.svg" alt="Yêu thích">
                                 <span>Đăng nhập</span>
                             </a>
@@ -41,10 +42,13 @@
     </header>
     <main>
         <div class="main">
+            <!-- Seach bar -->
             <section class="search-bar-section">
                 <div class="container">
-                    <h1>Hãy tìm kiếm nơi bạn muốn healing</h1>
-                    <p>Chúng tôi cung cấp dịch vụ homestay tốt nhất cho bạn</p>
+                    <div class="title">
+                        <h1>Hãy tìm kiếm nơi bạn muốn healing</h1>
+                        <p>Chúng tôi cung cấp dịch vụ homestay tốt nhất cho bạn</p>
+                    </div>
                     <div class="search-bar">
                         <div class="search-destination">
                             <img src="/asset/img/icon/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
@@ -87,14 +91,15 @@
                     </div>
                 </div>
             </section>
+            <!-- Room List -->
             <section class="list-room flash-sale">
-                <div>
+                <div class="container">
                     <div class="title">
                         <img class="flash-sale-icon" src="/asset/img/icon/icon_flashSale_home_white_new.png" alt="Flash Sale">
                         <p>Các homestay được tìm kiếm và đặt nhiều nhất do Homestay4u đề xuất</p>
                     </div>
                     <div class="content">
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <div class="sale">
                                     <span class="text">
@@ -104,9 +109,9 @@
                                 </div>
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -118,7 +123,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <div class="sale">
                                     <span class="text">
@@ -128,9 +133,9 @@
                                 </div>
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -142,7 +147,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <div class="sale">
                                     <span class="text">
@@ -152,9 +157,9 @@
                                 </div>
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -166,7 +171,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <div class="sale">
                                     <span class="text">
@@ -176,9 +181,9 @@
                                 </div>
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -189,26 +194,25 @@
                                     <p id="cost">500.000đ</p>
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div>                  
                     </div>
                     <button class="btn-view-more">Xem thêm</button>
                 </div>
             </section>
             <section class="list-room trending">
-                <div>
+                <div class="container">
                     <div class="title">
                         <h3>Đang thịnh hành</h3>
                         <p>Các homestay được tìm kiếm và đặt nhiều nhất do Homestay4u đề xuất</p>
                     </div>
                     <div class="content">
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -220,13 +224,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -238,13 +242,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -256,13 +260,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="room-container" id="p01" onclick="productDetail_onClick(this.id)">
+                        <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
                             <div class="ava">
                                 <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
                                 <input type="hidden" value="p01">
-                                <img class="room-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                                <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
                             </div>
-                            <div class="room-detail">
+                            <div class="detail">
                                 <h4>Mai Chau Countryside Homestay</h4>
                                 <div class="address">
                                     <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
@@ -276,6 +280,39 @@
                         </div>
                     </div>
                     <button class="btn-view-more">Xem thêm</button>
+                </div>
+            </section>
+            <!-- News -->
+            <section class ="news-list">
+                <div class="container">
+                    <div class="title">
+                        <h3>Tin tức</h3>
+                        <p>Các bài viết mới nhất về homestay</p>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <img class="thumbnail-ava" src="/asset/img/image/news/danang.jpg" alt="News1">
+                            <div class="detail">
+                                <p id="post-date">20/10/2024</p>
+                                <h3>Homestay ở đâu đẹp nhất?</h3>
+                                <p>Homestay là một loại hình lưu trú phổ biến hiện nay,...</p>
+                            </div>
+                        </div>
+                        <div class="content-container">
+                            <img class="thumbnail-ava" src="/asset/img/image/news/ha-long.jpg" alt="News2">
+                            <div class="detail">
+                                <p id="post-date">20/10/2024</p>
+                                <h3>Homestay ở đâu đẹp nhất?</h3>                                <p>Homestay là một loại hình lưu trú phổ biến hiện nay,...</p>                            </div>
+                        </div>
+                        <div class="content-container">
+                            <img class="thumbnail-ava" src="/asset/img/image/news/phu-quoc.jpg" alt="News2">
+                            <div class="detail">
+                                <p id="post-date">20/10/2024</p>
+                                <h3>Homestay ở đâu đẹp nhất?</h3>                                <p>Homestay là một loại hình lưu trú phổ biến hiện nay,...</p>                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-view-more">Xem thêm</button>
+
                 </div>
             </section>
         </div>

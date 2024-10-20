@@ -42,6 +42,16 @@ nav ul{
     height: 100%;
 }
 
+header nav ul li{
+    display: flex;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header nav ul li:hover{
+    background-color: #f2f2f1;
+}
+
+
 nav ul li a{
     height: 100%;
     margin: 0 20px;
@@ -50,20 +60,19 @@ nav ul li a{
     justify-content: center;
     text-align: center;
     width: 100%;
-    transition: background-color 0.3s ease-in-out;
 }
 
-ul .hover-effect :hover{
-    background-color: #f2f2f1;
-}
-
-.left-nav{
+nav {
     display: flex;
+    justify-content: space-between;
+}
+.left-nav{
     justify-content: flex-start;
     height: 100%;
 }
 
-.left-nav ul{
+.left-nav ul,
+.right-nav ul{
     display: flex;
 }
 .left-nav ul li a{
@@ -77,18 +86,23 @@ ul .hover-effect :hover{
 
 .right-nav{
     height: 100%;
-    display: flex;
     justify-content: flex-end;
-}
-
-.right-nav ul{
-    display: flex;
 }
 
 .right-nav ul li button:focus{
     outline: none;
 }
 
+.right-nav ul li .account{
+    position: absolute;
+    visibility: hidden;
+}
+
+
+.right-nav .sign-in{
+    position: relative;
+    visibility: visible;
+}
 .right-nav ul li a{
     display: flex;
     justify-content: center;
@@ -116,12 +130,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-}
-
-.container{
-    width: 75%;
-    padding: 60px 0;
     margin: 0 auto;
 }
 
@@ -292,23 +300,41 @@ fieldset button{
 }
 
 /* Section */
+section {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-.list-room.flash-sale{
+section .container {
+    width: 75%;
+    display: flex;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.flash-sale{
     background-color: #ffebf0;
     width: 100%;
 }
 
-.list-room > div {
-    width: 75%;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
+.news-list{
+    background-color: aliceblue;
 }
+
 /*Flash Sale*/
+
 .list-room.flash-sale .flash-sale-icon{
     display: block;
     width: 200px;
 }
+
+
 /* Trending */
 .title{
     margin: 15px 0;
@@ -316,12 +342,11 @@ fieldset button{
 
 .content{
     display: flex;
-    flex-wrap: wrap;
-    flex: 1;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.room-container{
+.content-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -334,11 +359,11 @@ fieldset button{
     overflow: hidden;    
 }
 
-.room-container:hover{
+.content-container:hover{
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-    .room-container .room-title{
+    .content-container .room-title{
         font-size: 16px;
         font-weight: bold;
         margin: 0;
@@ -355,6 +380,13 @@ fieldset button{
         z-index: 100;
         filter:invert(1);
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .thumbnail-ava{
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
     }
 
     .list-room.flash-sale .sale{
@@ -384,13 +416,8 @@ fieldset button{
         height: 50%;
 
     }
-    .ava .room-ava{
-        border-radius: 10px 10px 0 0;
-        width: 100%;
-        height: 170px;
-        object-fit: cover;
-    }
-    .room-container .room-detail{
+    
+    .content-container .detail{
         flex: 1;
         display: flex;
         padding: 5px 15px 15px 15px;
@@ -398,7 +425,7 @@ fieldset button{
         justify-content: space-between;
     }
 
-        .room-container .room-detail .address{
+        .content-container .detail .address{
             display: flex;
             justify-content: start;
             align-items: center;
@@ -409,7 +436,7 @@ fieldset button{
                 margin-right: 10px;
             }
 
-        .room-container .room-detail .price{
+        .content-container .detail .price{
             text-align: end;
             margin-top: auto;
             bottom: 0;
@@ -451,6 +478,20 @@ fieldset button{
             color: black;
         }
 
+/* News */
+.news-list .content-container .detail{
+    justify-content: start;
+}
+
+.news-list .detail p{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.news-list .detail #post-date{
+    font-size: 14px;
+
+}
 /* Footer */
 footer{
     background-color: #171717;
