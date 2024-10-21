@@ -4,37 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách phòng yêu thích - Hotel Booking</title>
-    <link rel="stylesheet" href="/asset/css/favouriteList.css"
+    <link rel="stylesheet" href="/asset/css/favouriteList.css">
 </head>
 <body>
+    <header>
+        <div class="header">
+            <img class="logo" src="/asset/img/icon/logo.png" alt="Logo">
+            <nav>
+                <div class="left-nav">
+                    <ul>
+                        <li class="hover-effect"><a href="#">Trang chủ</a></li>
+                        <li class="hover-effect"><a href="#">Blog</a></li>
+                        <li class="hover-effect"><a href="#footer">Về chúng tôi</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
     <div class="container">
         <h1>Danh sách phòng yêu thích</h1>
-        <ul class="room-list">
-            <li class="room-item">
-                <img src="room1.jpg" alt="Phòng Deluxe" class="room-image">
-                <div class="room-info">
+        <ul class="hotel-list">
+            <li class="hotel-item">
+                <img src="room1.jpg" alt="Phòng Deluxe" class="hotel-image">
+                <div class="hotel-info">
                     <h2>Phòng Deluxe</h2>
                     <p>Khách sạn Hà Nội</p>
                     <p>Giá: 1,200,000 VND/đêm</p>
                 </div>
-                <div class="room-actions">
+                <div class="hotel-actions">
                     <button class="details" onclick="window.location.href='#'">Xem chi tiết</button>
                     <button class="remove">Bỏ yêu thích</button>
                 </div>
             </li>
-            <li class="room-item">
-                <img src="room2.jpg" alt="Phòng Suite" class="room-image">
-                <div class="room-info">
+            <li class="hotel-item">
+                <img src="room2.jpg" alt="Phòng Suite" class="hotel-image">
+                <div class="hotel-info">
                     <h2>Phòng Suite</h2>
                     <p>Khách sạn Đà Nẵng</p>
                     <p>Giá: 2,500,000 VND/đêm</p>
                 </div>
-                <div class="room-actions">
+                <div class="hotel-actions">
                     <button class="details" onclick="window.location.href='#'">Xem chi tiết</button>
                     <button class="remove">Bỏ yêu thích</button>
                 </div>
             </li>
-        </ul>S
+        </ul>
     </div>
+    <footer>
+        <div class="footer-detail">
+            <div class="col-descrip">
+                <img src="/asset/img/icon/logowhite.svg" alt="Logo">
+                <h4>Công ty cổ phần dịch vụ Homestay4u</h4>
+                <p>Tổng đài chăm sóc: 1900 1234</p>
+                <P>Văn phòng tại: Tầng 55, tòa nhà Landmark 72 <br/> Lô E6, Khu đô thị mới Cầu Giấy, Nam Từ Liêm, Hà Nội</P>
+                <p>Công ty cổ phần dịch vụ Homestay4u là lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut<br/> labore et dolore magna aliqua.</p>
+            </p>
+            </div>
+            <div class="col-link">
+                <ul>
+                    <li class="footer-mark"><a href = "#">Trang chủ</a></li>
+                    <li class="footer-mark"><a href = "#">Blog</a></li>
+                    <li class="footer-mark"><a href = "#footer">Về chúng tôi</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>Copyright &copy; Công ty cổ phần dịch vụ Homestay4u</p>
+     
+    </footer>
 </body>
 </html>
