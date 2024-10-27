@@ -305,6 +305,7 @@ main>p>a{
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 0;
 }
 
 .containter{

@@ -60,19 +60,22 @@
 
                         <span class = "divide-line1"></span>
                         <fieldset class="search-date">
-                            <button class="btn-search">
+                            <button class="btn-search" id="check-in-date" onclick="datePicker_onclick(id)">
                                 <img src="/asset/img/icon/event_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
                                 <span class="btn-date">
                                     <span>Ngày nhận phòng</span>
-                                    <span id="check-in" class="fill-date">Chọn ngày</span>
+                                    <span id="check-in-title" class="fill-date" >Chọn ngày</span>
+                                    <input type="date" id="check-in" name="check-in">
+
                                 </span>
                             </button>
                             <span class = "divide-line2"></span>
-                            <button class="btn-search">
+                            <button class="btn-search" id="check-out-date" onclick="datePicker_onclick(id)">
                                 <img src="/asset/img/icon/event_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
                                 <span class = "btn-date">
                                     <span>Ngày trả phòng</span>
-                                    <span id="check-out" class="fill-date" >Chọn ngày</span>
+                                    <span id="check-out-title" class="fill-date" >Chọn ngày</span>
+                                    <input type="date" id="check-out" name="check-out">
                                 </span>
                             </button>
                         </fieldset>
@@ -341,7 +344,38 @@
 <script>
     function productDetail_onClick(click_id){
         var div = document.getElementById(click_id);
-        location.href = "/src/productDetail.html?product_id=" + click_id;
+        location.href = "/src/detailRoom.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const checkInInput = document.getElementById("check-in");
+        const checkOutInput = document.getElementById("check-out");
+        const today = new Date().toISOString().split('T')[0]; // Lấy ngày hiện tại theo định dạng YYYY-MM-DD
+        checkInInput.min = today; // Thiết lập giá trị min là ngày hôm nay
+        checkOutInput.min = today;
+    });
+
+
+    function datePicker_onclick(id){
+        const clickItem = document.getElementById(id);
+        const picker = clickItem.querySelector('input[type="date"]');
+        const text_span = clickItem.querySelector('span.fill-date');
+
+        if (window.getComputedStyle(picker).display === "none") {
+            text_span.style.display = "none";
+            picker.style.display = "block";
+            picker.focus();
+            picker.showPicker();
+        } else {
+            picker.style.display = "block";
+        } 
+
+        if (id === 'check-in-date') {
+        const checkInDate = picker.value;
+        const pickerCheckOut = document.getElementById("check-out-date");
+        const checkOutInput = pickerCheckOut.querySelector('input[type="date"]');
+        }
+        
     }
 </script>
 </html>
