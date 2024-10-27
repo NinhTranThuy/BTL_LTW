@@ -12,8 +12,11 @@ header{
     justify-content: center;
     background-color: white;
     width: 100%;
-    height: 60px;
+    height: 70px;
     font-weight:300;
+    z-index: 1000;
+    position: relative;
+    border: none;
 }
 
 .header{
@@ -29,7 +32,7 @@ header{
     cursor: pointer;
 }
 nav{
-    height: 60px;
+    height: inherit;
     display: flex;
     align-items: center;
     width: 100%;
@@ -117,6 +120,319 @@ nav {
     margin-right: 10px;
 }
 
+/* Main */
+section {
+    margin-bottom: 30px;
+}
+main{
+    width: 80%;
+    display: flex;
+    margin: 0 auto 0 auto;
+    flex-direction: column;
+}
+
+
+.summary{
+    display: flex;
+}
+
+main>p {
+    padding: 20px 0;
+}
+main>p>a{
+    text-decoration: none;
+    color: #171717;
+}
+
+.room_ava {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr); /* Tạo 3 cột */
+    grid-template-rows: auto auto; /* Tạo 2 hàng */
+    gap: 10px;
+    width: 40vw;
+    height: auto;
+}
+
+.room_ava .large-image {
+    grid-column: 1 / -1; /* Chiếm toàn bộ hàng đầu tiên */
+    width: 100%;
+    height: 25vw;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+.room_ava .small-image {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+.name {
+    background-color: white;
+    margin-left: 15px;
+    padding: 10px 20px;
+    width: 40vw;
+    height: inherit;
+    border: 0.25px solid #9c9c9c;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 2px -2px 15px 0 rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.name .room-name{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.name div {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+    .name div>img{
+        width: 20px;
+        height:20px;
+        margin-right: 10px;
+    }
+    .name .address,.star-rate{
+        font-size: 15px;
+        font-weight: light;
+        margin: 10px;
+    }
+
+.name .convenient ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+    .convenient ul li{
+        margin-right: 10px;
+        padding: 5px 10px;
+        border: 1px solid #9c9c9c;
+        border-radius: 10px;
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .convenient ul li:hover{
+        background-color: #f2f2f1;
+    }
+
+.name .booking{
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    flex-direction: column;
+    width: 35vw;
+    margin-top: auto;
+}
+
+    .name .favourite-icon img{
+        width: 25px;
+        height: auto;
+        margin: 0;   
+    }
+    .name .favourite-icon img:hover{
+        display: flex;
+        cursor: pointer;
+    }
+
+        .favourite-icon #heart-regular{
+            z-index: 0;
+        }
+        .favourite-icon #heart-solid{
+            z-index: 1000;
+            visibility:hidden;
+            position: absolute;
+        }
+
+    .name .price_booking{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items:flex-end;
+        margin: 10px 0;
+    }
+
+        .price_booking #price{
+            font-size: 35px;
+            font-weight: bold;
+            color: #003b95;
+        }
+
+        .price_booking #btnBooking{
+            padding: 10px 15px;
+            font-size: 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: #ffc60a;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid #9c9c9c;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 2px -2px 15px 0 rgba(0,0,0,0.1);
+}
+
+.detail .room-name{
+    font-size: 18px;
+    font-weight:500;
+}
+
+.detail .gallery img{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+/* Hint Room */
+.hintRoom{
+    background-color: #f2f2f1;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.containter{
+    width: 80%;
+}
+
+.hintRoom h2{
+    padding-bottom: 15px;
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24%;
+    height: 360px;
+    border-radius: 10px;
+    position: relative;
+    transition: ease-in-out 0.15s;
+    background-color: white;
+    overflow: hidden;    
+}
+
+.content-container:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+    .content-container .room-title{
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+}
+
+    .ava{
+        position: relative;
+    }
+    .ava .img-heart{
+        position: absolute;
+        width: 20px;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+        filter:invert(1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .thumbnail-ava{
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .list-room.flash-sale .sale{
+        position: absolute;
+        background-color: #ffc60a;
+        color: black;
+        font-weight: bold;
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        top: -35px;
+        left: -35px;
+        display: flex;
+        justify-content:center;
+        text-align:center;
+
+    }
+
+    .list-room.flash-sale .sale .text{
+        position: absolute;
+        right: 0;
+        bottom: 0; 
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 70%;
+        height: 50%;
+
+    }
+    
+    .content-container .hint-detail{
+        flex: 1;
+        display: flex;
+        padding: 5px 15px 15px 15px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .content-container .hint-detail .address{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+            .address img{
+                width: 15px;
+                margin-right: 10px;
+            }
+
+            
+        .content-container .hint-detail .price{
+            text-align: end;
+            margin-top: auto;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+     
+            .price #discount{
+                color:#a3a3a3;
+                text-decoration: line-through;
+                margin: 0;
+            }
+    
+            .price #cost{
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0;
+            }
 /* Footer */
 footer{
     background-color: #171717;
