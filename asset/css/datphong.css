@@ -1,0 +1,128 @@
+/* Basic styling for the form layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    background-color: #ccc;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.step-text {
+    color: #666;
+}
+
+.step-active .step-number {
+    background-color: #007bff;
+    font-weight: bold;
+}
+
+.step-active .step-text {
+    color: #007bff;
+}
+
+.step-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form {
+    width: 60%;
+}
+
+.booking-summary {
+    width: 35%;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.hotel-image {
+    width: 100%; /* Chiều rộng mới */
+    height: auto; /* Giữ tỷ lệ ảnh */
+   
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.room-details {
+    margin-top: 15px;
+}

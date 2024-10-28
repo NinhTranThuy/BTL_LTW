@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -89,6 +91,14 @@ body {
 }
 
 /* Thông tin khách sạn */
+.thanhtoan-image
+{
+    width: 100%; 
+    height: auto; /* Giữ tỷ lệ ảnh */
+   
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
 .hotel-info {
     flex: 1;
     padding: 20px;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Phòng Khách Sạn</title>
+    <link rel="stylesheet" href="../asset/css/datphong.css">
+</head>
+<body>
+    <!-- Step Indicator -->
+    <div class="step-indicator">
+        <div class="step step-active">
+            <div class="step-number">1</div>
+            <div class="step-text">Đặt</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">Thanh toán</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">Gửi phiếu xác nhận</div>
+        </div>
+    </div>
+
+    <!-- Booking Form and Summary -->
+    <div class="container">
+        <div class="booking-form">
+            <h2>Thông tin đặt phòng</h2>
+            <form action="/submit-booking" method="POST">
+                <h3>Thông tin người đặt phòng</h3>
+                <label for="salutation">Danh xưng *</label>
+                <select id="salutation" name="salutation" required>
+                    <option value="Anh">Anh</option>
+                    <option value="Chị">Chị</option>
+                </select>
+                
+                <label for="fullName">Họ và tên *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Họ và tên" required>
+                
+                <label for="phoneNumber">Số điện thoại *</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(+84) Số điện thoại" required>
+                
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                
+                <button type="submit" class="submit-button">Tiếp tục</button>
+            </form>
+        </div>
+        
+        <div class="booking-summary">
+            <img src="../asset/img/image/p03/p03.jpg" class="hotel-image" >
+            <h3>Khách sạn </h3>
+          
+            <p>Địa chỉ:</p>
+            <p>Ngày nhận phòng: </p>
+            <p>Ngày trả phòng: </p>
+            <p>Số đêm: </p>
+            <div class="room-details">
+                <p>Phòng: </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
