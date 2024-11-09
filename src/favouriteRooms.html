@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách phòng yêu thích - Hotel Booking</title>
     <link rel="stylesheet" href="/asset/css/favouriteList.css">
+    <link rel="shortcut icon" href="/asset/img/icon/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -22,35 +23,89 @@
             </nav>
         </div>
     </header>
-    <div class="container">
-        <h1>Danh sách phòng yêu thích</h1>
-        <ul class="hotel-list">
-            <li class="hotel-item">
-                <img src="room1.jpg" alt="Phòng Deluxe" class="hotel-image">
-                <div class="hotel-info">
-                    <h2>Phòng Deluxe</h2>
-                    <p>Khách sạn Hà Nội</p>
-                    <p>Giá: 1,200,000 VND/đêm</p>
+    <section class="list-room trending">
+        <div class="container">
+            <div class="title">
+                <h3>Danh sách phòng yêu thích</h3>
+                <p>Các homestay được yêu thích và được lưu trữ tại đây</p>
+            </div>
+            <div class="content">
+                <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
+                    <div class="ava">
+                        <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
+                        <input type="hidden" value="p01">
+                        <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                    </div>
+                    <div class="detail">
+                        <h4>Mai Chau Countryside Homestay</h4>
+                        <div class="address">
+                            <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
+                            <p>Mai Châu</p>
+                        </div>
+                        <div class="price">
+                            <p id="discount">1.000.000đ</p>
+                            <p id="cost">500.000đ</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="hotel-actions">
-                    <button class="details" onclick="window.location.href='#'">Xem chi tiết</button>
-                    <button class="remove">Bỏ yêu thích</button>
+                <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
+                    <div class="ava">
+                        <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
+                        <input type="hidden" value="p01">
+                        <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                    </div>
+                    <div class="detail">
+                        <h4>Mai Chau Countryside Homestay</h4>
+                        <div class="address">
+                            <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
+                            <p>Mai Châu</p>
+                        </div>
+                        <div class="price">
+                            <p id="discount">1.000.000đ</p>
+                            <p id="cost">500.000đ</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="hotel-item">
-                <img src="room2.jpg" alt="Phòng Suite" class="hotel-image">
-                <div class="hotel-info">
-                    <h2>Phòng Suite</h2>
-                    <p>Khách sạn Đà Nẵng</p>
-                    <p>Giá: 2,500,000 VND/đêm</p>
+                <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
+                    <div class="ava">
+                        <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
+                        <input type="hidden" value="p01">
+                        <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                    </div>
+                    <div class="detail">
+                        <h4>Mai Chau Countryside Homestay</h4>
+                        <div class="address">
+                            <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
+                            <p>Mai Châu</p>
+                        </div>
+                        <div class="price">
+                            <p id="discount">1.000.000đ</p>
+                            <p id="cost">500.000đ</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="hotel-actions">
-                    <button class="details" onclick="window.location.href='#'">Xem chi tiết</button>
-                    <button class="remove">Bỏ yêu thích</button>
+                <div class="content-container" id="p01" onclick="productDetail_onClick(this.id)">
+                    <div class="ava">
+                        <img class="img-heart" src="/asset/img/icon/heart-regular.svg" alt="Favour">
+                        <input type="hidden" value="p01">
+                        <img class="thumbnail-ava" src="/asset/img/image/p01/p01.jpg" alt="Homestay1">
+                    </div>
+                    <div class="detail">
+                        <h4>Mai Chau Countryside Homestay</h4>
+                        <div class="address">
+                            <img src="/asset/img/icon/location-dot-solid.svg" alt="Location">
+                            <p>Mai Châu</p>
+                        </div>
+                        <div class="price">
+                            <p id="discount">1.000.000đ</p>
+                            <p id="cost">500.000đ</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </div>
+            </div>
+            <button class="btn-view-more">Xem thêm</button>
+        </div>
+    </section>
     <footer>
         <div class="footer-detail">
             <div class="col-descrip">
