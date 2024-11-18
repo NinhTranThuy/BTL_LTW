@@ -1,12 +1,18 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     padding: 20px;
 }
 
+.section-process{
+    flex: 1; /* Đẩy thanh giai đoạn giãn ra */
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
 .container {
     display: flex;
     justify-content: space-between;
@@ -18,15 +24,20 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+hr {
+    width: 100px;
+
+}
 /* Thanh điều hướng */
-.navigation {
+.process {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.navigation div {
+.process div {
+    margin: 0 10px;
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -38,8 +49,10 @@ body {
     justify-content: center;
     padding: 10px;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 2vw;
+    height: 2vw;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #007bff;
     color: white;
     font-weight: bold;
@@ -48,7 +61,7 @@ body {
 }
 
 .inactive-step {
-    background-color: #ccc;
+    background-color: #cccccc60;
     color: #777;
 }
 
@@ -64,8 +77,17 @@ body {
 
 /* Thông tin thanh toán */
 .payment-info {
+    display: flex;
+    flex-direction: column;
     flex: 2;
     margin-right: 20px;
+    align-items: start;
+}
+
+.payment-info hr{
+    width: 250px;
+    display: flex;
+    margin-left: 0;
 }
 
 .payment-title {
@@ -75,17 +97,42 @@ body {
 }
 
 .payment-method {
-    margin-bottom: 20px;
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.payment-method label {
+.payment-method.selected {
+    background-color: #ffc60a33;
+}
+
+.payment-ava{
+    width: 10%;
+    height: auto;
+    object-fit:contain;
+    margin-right: 30px;
+}
+
+.payment-detail {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.payment-detail label {
     display: flex;
     align-items: center;
-    cursor: pointer;
     margin: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.payment-method input {
+.payment-method input { 
     margin-right: 10px;
     accent-color: #007bff;
 }
@@ -126,20 +173,34 @@ body {
 
 .apply-button {
     padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
+    color: black;
+    border: 2px solid #ffc60a;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    font-weight: bold;
+    transition: ease-in-out 0.2s;
 }
 
 .apply-button:hover {
-    background-color: #0056b3;
+    background-color: #ffc60a;
 }
+
 
 /* Ẩn các chi tiết cho đến khi chọn phương thức thanh toán */
 .hidden {
     display: none;
+}
+
+.logo {
+    width: 100px; /* Kích thước logo */
+    height: auto;
+    object-fit: contain;
+}
+.header-container {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Tạo khoảng cách giữa logo và thanh giai đoạn */
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách khách sạn đã đặt</title>
+    <link rel="stylesheet" href="/asset/css/bookingList.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="/asset/img/icon/logo.png" alt="Logo">
+            <nav>
+                <div class="left-nav">
+                    <ul>
+                        <li class="hover-effect"><a href="#">Trang chủ</a></li>
+                        <li class="hover-effect"><a href="#">Blog</a></li>
+                        <li class="hover-effect"><a href="#footer">Về chúng tôi</a></li>
+                    </ul>
+                </div>
+    
+                
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Danh sách khách sạn đã đặt</h1>
+        <ul class="hotel-list">
+            <li class="hotel-item">
+                <img src="hotel1.jpg" alt="Khách sạn Hà Nội" class="hotel-image">
+                <div class="hotel-info">
+                    <h2>Deluxe</h2>
+                    <p>Địa chỉ: 123 Phố Cổ, Hà Nội</p>
+                    <p>Ngày đặt: 12/10/2024 - 14/10/2024</p>
+                </div>
+                <div class="hotel-actions">
+                    <button class="details" onclick="window.location.href='roomdetail.html?room=deluxe'">Xem chi tiết</button>
+                    <button class="cancel">Hủy đặt phòng</button>
+                </div>
+            </li>
+            <li class="hotel-item">
+                <img src="hotel2.jpg" alt="Khách sạn Đà Nẵng" class="hotel-image">
+                <div class="hotel-info">
+                    <h2>Khách sạn Đà Nẵng</h2>
+                    <p>Địa chỉ: 456 Đường Biển, Đà Nẵng</p>
+                    <p>Ngày đặt: 15/10/2024 - 17/10/2024</p>
+                </div>
+                <div class="hotel-actions">
+                    <button class="details" onclick="window.location.href='roomdetail.html?room=suite'">Xem chi tiết</button>
+                    <button class="cancel">Hủy đặt phòng</button>
+                </div>
+            </li>
+            <!-- Thêm nhiều khách sạn khác tương tự -->
+        </ul>
+    </div>
+    <footer>
+        <div class="footer-detail">
+            <div class="col-descrip">
+                <img src="/asset/img/icon/logowhite.svg" alt="Logo">
+                <h4>Công ty cổ phần dịch vụ Homestay4u</h4>
+                <p>Tổng đài chăm sóc: 1900 1234</p>
+                <P>Văn phòng tại: Tầng 55, tòa nhà Landmark 72 <br/> Lô E6, Khu đô thị mới Cầu Giấy, Nam Từ Liêm, Hà Nội</P>
+                <p>Công ty cổ phần dịch vụ Homestay4u là lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut<br/> labore et dolore magna aliqua.</p>
+            </p>
+            </div>
+            <div class="col-link">
+                <ul>
+                    <li class="footer-mark"><a href = "#">Trang chủ</a></li>
+                    <li class="footer-mark"><a href = "#">Blog</a></li>
+                    <li class="footer-mark"><a href = "#footer">Về chúng tôi</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>Copyright &copy; Công ty cổ phần dịch vụ Homestay4u</p>
+     
+    </footer>
+</body>
+</html>

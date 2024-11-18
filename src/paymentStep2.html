@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Thanh Toán</title>
+    <link rel="stylesheet" href="\asset\css\paymentStep2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="/asset/img/icon/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <section class="section-process">
+        <!-- Thanh Gia Doan Thanh Toan -->
+        <div class="process">
+            <div>
+                <div class="step">1</div>
+                <div class="step-text active-step-text"><strong>Đặt</strong></div>
+            </div>
+            <hr />
+            <div>
+                <div class="step">2</div>
+                <div class="step-text active-step-text">Thanh toán</div>
+            </div>
+            <hr
+            <div>
+                <div class="step inactive-step">3</div>
+                <div class="step-text">Gửi phiếu xác nhận</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nội Dung Trang -->
+    <div class="container">
+        <!-- Thông Tin Thanh Toán -->
+        <div class="payment-info">
+            <div class="payment-title">THÔNG TIN THANH TOÁN</div>
+            <hr />
+            <p>Chọn hình thức thanh toán</p>
+
+            <div class="payment-method" onclick="selectPaymentMethod(this)">
+                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <div class="payment-detail">
+                    <label>
+                        <input type="radio" name="payment" value="zaloPay" checked>
+                        Thanh toán qua ví ZaloPay
+                    </label>
+                    <div>Phí thanh toán: 36.204 VNĐ</div>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="selectPaymentMethod(this)">
+                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <div class="payment-detail">
+                    <label>
+                        <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
+                        Thẻ nội địa
+                    </label>
+                    <div>Phí thanh toán: 36.204 VNĐ</div>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="selectPaymentMethod(this)">
+                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <div class="payment-detail">
+                    <label>
+                        <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
+                        Thanh toán bằng Thẻ quốc tế
+                    </label>
+                    <div>Phí thanh toán: 36.204 VNĐ</div>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="selectPaymentMethod(this)">
+                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <div class="payment-detail">
+                    <label>
+                        <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
+                        Thanh toán bằng ví MoMo
+                    </label>
+                    <div>Phí thanh toán: 36.204 VNĐ</div>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="selectPaymentMethod(this)">
+                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <div class="payment-detail">
+                    <label>
+                        <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
+                        Thanh toán bằng ví ShopeePay
+                    </label>
+                    <div>Phí thanh toán: 36.204 VNĐ</div>
+                </div>
+            </div>
+
+            <div class="payment-method" onclick="selectPaymentMethod(this)">
+                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <div class="payment-detail">
+                    <label>
+                        <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
+                        Thanh toán chuyển khoản
+                    </label>
+                    <div>Phí thanh toán: 36.204 VNĐ</div>
+                </div>
+            </div>
+
+            <button class="apply-button">Tiếp Tục</button>
+        </div>
+
+        <!-- Thông Tin Khách Sạn -->
+        <div class="hotel-info">
+            <div class="hotel-title">Khách sạn </div>
+            <div class="hotel-address">Địa chỉ: <strong></strong></div>
+            <div class="hotel-checkin">Ngày nhận phòng: <strong></strong></div>
+            <div class="hotel-checkout">Ngày trả phòng: <strong></strong></div>
+            <div class="hotel-nights">Số đêm: <strong></strong></div>
+            <div class="hotel-room">Phòng: <strong></strong></div>
+            <div class="hotel-price">Giá từ khách sạn: <strong></strong></div>
+            <div class="total">Tổng cộng: <strong></strong></div>
+        </div>
+    </div>
+
+    <script>
+        function selectPaymentMethod(element){
+            var classPaymentMethod = document.getElementsByClassName('payment-method');
+            const radio = element.querySelector('input[type="radio"]');
+            for (var i = 0; i < classPaymentMethod.length; i++) {
+                classPaymentMethod[i].classList.remove('selected');
+            }
+            
+            // Thêm lớp 'selected' vào phần tử được nhấp vào
+            element.classList.add('selected');
+            
+            radio.checked = true;
+        }
+    </script>
+</body>
+</html>
