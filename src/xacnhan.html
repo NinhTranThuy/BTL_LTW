@@ -13,11 +13,9 @@
             <img class="logo" src="/asset/img/icon/logo.png" alt="Logo">
             <nav>
                 <div class="nav-links">
-                    <ul>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Về chúng tôi</a></li>
-                    </ul>
+                    <a href="#">Trang chủ</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Về chúng tôi</a>
                 </div>
             </nav>
         </div>
@@ -25,6 +23,8 @@
 
     <div class="confirmation-container">
         <h2>Xác Nhận Đặt Phòng</h2>
+        <p id="confirmationMessage" class="confirmation-message">Đặt phòng đã được xác nhận của bạn tại Homestay4U.</p>
+
         <div class="guest-info">
             <h3>Thông Tin Người Đặt Phòng</h3>
             <p><strong>Danh xưng:</strong> <span id="salutation"></span></p>
@@ -35,7 +35,7 @@
 
         <div class="room-info">
             <h3>Thông Tin Phòng</h3>
-            <img src="../asset/img/image/p03/p03.jpg" class="hotel-image" alt="Hình ảnh khách sạn">
+            <img src="../asset/img/image/p05/p05.jpg" class="hotel-image" alt="Hình ảnh khách sạn">
             <p><strong>Khách sạn:</strong> <span id="hotelName"></span></p>
             <p><strong>Địa chỉ:</strong> <span id="hotelAddress"></span></p>
             <p><strong>Ngày nhận phòng:</strong> <span id="checkInDate"></span></p>
@@ -48,19 +48,21 @@
     </div>
 
     <script>
+        // Lấy thông tin từ URL hoặc server
         const params = new URLSearchParams(window.location.search);
         
-        document.getElementById('salutation').textContent = params.get('salutation') || "N/A";
-        document.getElementById('fullName').textContent = params.get('fullName') || "N/A";
-        document.getElementById('phoneNumber').textContent = params.get('phoneNumber') || "N/A";
-        document.getElementById('email').textContent = params.get('email') || "N/A";
+        document.getElementById('salutation').textContent = params.get('salutation');
+        document.getElementById('fullName').textContent = params.get('fullName');
+        document.getElementById('phoneNumber').textContent = params.get('phoneNumber');
+        document.getElementById('email').textContent = params.get('email');
 
-        document.getElementById('hotelName').textContent = 'Khách sạn ABC';
-        document.getElementById('hotelAddress').textContent = '123 Đường XYZ';
-        document.getElementById('checkInDate').textContent = '2024-12-01';
-        document.getElementById('checkOutDate').textContent = '2024-12-03';
-        document.getElementById('numberOfNights').textContent = '2 đêm';
-        document.getElementById('roomDetails').textContent = 'Phòng đôi - View biển';
+        // Thông tin phòng (giả lập, cần thay bằng dữ liệu thực tế)
+        document.getElementById('hotelName').textContent = 'Homestay4U'; 
+        document.getElementById('hotelAddress').textContent = 'Mai Chau,Hoa Binh';
+        document.getElementById('checkInDate').textContent = '01/12/2024';
+        document.getElementById('checkOutDate').textContent = '03/12/2024';
+        document.getElementById('numberOfNights').textContent = '2';
+        document.getElementById('roomDetails').textContent = 'Phòng Deluxe King Size';
     </script>
 </body>
 </html>
