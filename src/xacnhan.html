@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác Nhận Đặt Phòng</title>
+    <link rel="stylesheet" href="../asset/css/xacnhan.css">
+    <link rel="stylesheet" href="../asset/css/datphong.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="/asset/img/icon/logo.png" alt="Logo">
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="confirmation-container">
+        <h2>Xác Nhận Đặt Phòng</h2>
+        <div class="guest-info">
+            <h3>Thông Tin Người Đặt Phòng</h3>
+            <p><strong>Danh xưng:</strong> <span id="salutation"></span></p>
+            <p><strong>Họ và tên:</strong> <span id="fullName"></span></p>
+            <p><strong>Số điện thoại:</strong> <span id="phoneNumber"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+        </div>
+
+        <div class="room-info">
+            <h3>Thông Tin Phòng</h3>
+            <img src="../asset/img/image/p03/p03.jpg" class="hotel-image" alt="Hình ảnh khách sạn">
+            <p><strong>Khách sạn:</strong> <span id="hotelName"></span></p>
+            <p><strong>Địa chỉ:</strong> <span id="hotelAddress"></span></p>
+            <p><strong>Ngày nhận phòng:</strong> <span id="checkInDate"></span></p>
+            <p><strong>Ngày trả phòng:</strong> <span id="checkOutDate"></span></p>
+            <p><strong>Số đêm:</strong> <span id="numberOfNights"></span></p>
+            <p><strong>Phòng:</strong> <span id="roomDetails"></span></p>
+        </div>
+
+        <button onclick="window.location.href='datphong.html'" class="back-button">Quay lại</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        
+        document.getElementById('salutation').textContent = params.get('salutation') || "N/A";
+        document.getElementById('fullName').textContent = params.get('fullName') || "N/A";
+        document.getElementById('phoneNumber').textContent = params.get('phoneNumber') || "N/A";
+        document.getElementById('email').textContent = params.get('email') || "N/A";
+
+        document.getElementById('hotelName').textContent = 'Khách sạn ABC';
+        document.getElementById('hotelAddress').textContent = '123 Đường XYZ';
+        document.getElementById('checkInDate').textContent = '2024-12-01';
+        document.getElementById('checkOutDate').textContent = '2024-12-03';
+        document.getElementById('numberOfNights').textContent = '2 đêm';
+        document.getElementById('roomDetails').textContent = 'Phòng đôi - View biển';
+    </script>
+</body>
+</html>
