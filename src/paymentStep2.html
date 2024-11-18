@@ -10,25 +10,32 @@
 
 </head>
 <body>
-    <section class="section-process">
-        <!-- Thanh Gia Doan Thanh Toan -->
-        <div class="process">
-            <div>
-                <div class="step">1</div>
-                <div class="step-text active-step-text"><strong>Đặt</strong></div>
-            </div>
-            <hr />
-            <div>
-                <div class="step">2</div>
-                <div class="step-text active-step-text">Thanh toán</div>
-            </div>
-            <hr
-            <div>
-                <div class="step inactive-step">3</div>
-                <div class="step-text">Gửi phiếu xác nhận</div>
+    <header>
+        <div class="header">
+            <div class="header-container">
+                <img class="logo" src="/asset/img/icon/logo.png" alt="Logo">
+                <section class="section-process">
+                    <!-- Thanh Giai Đoạn Thanh Toán -->
+                    <div class="process">
+                        <div>
+                            <div class="step">1</div>
+                            <div class="step-text active-step-text"><strong>Đặt</strong></div>
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="step">2</div>
+                            <div class="step-text active-step-text">Thanh toán</div>
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="step inactive-step">3</div>
+                            <div class="step-text">Gửi phiếu xác nhận</div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Nội Dung Trang -->
     <div class="container">
@@ -39,7 +46,7 @@
             <p>Chọn hình thức thanh toán</p>
 
             <div class="payment-method" onclick="selectPaymentMethod(this)">
-                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <img class="payment-ava" src="\asset\img\image\p05\zalopay.jpg">
                 <div class="payment-detail">
                     <label>
                         <input type="radio" name="payment" value="zaloPay" checked>
@@ -50,7 +57,7 @@
             </div>
 
             <div class="payment-method" onclick="selectPaymentMethod(this)">
-                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <img class="payment-ava" src="\asset\img\image\p05\the noi dia.jpg">
                 <div class="payment-detail">
                     <label>
                         <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
@@ -61,7 +68,7 @@
             </div>
 
             <div class="payment-method" onclick="selectPaymentMethod(this)">
-                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <img class="payment-ava" src="\asset\img\image\p05\the quoc te.jpg">
                 <div class="payment-detail">
                     <label>
                         <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
@@ -72,7 +79,7 @@
             </div>
 
             <div class="payment-method" onclick="selectPaymentMethod(this)">
-                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <img class="payment-ava" src="\asset\img\image\p05\momo.jpg">
                 <div class="payment-detail">
                     <label>
                         <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
@@ -83,7 +90,7 @@
             </div>
 
             <div class="payment-method" onclick="selectPaymentMethod(this)">
-                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <img class="payment-ava" src="\asset\img\image\p05\zalopay.jpg">
                 <div class="payment-detail">
                     <label>
                         <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
@@ -94,7 +101,8 @@
             </div>
 
             <div class="payment-method" onclick="selectPaymentMethod(this)">
-                <img class="payment-ava" src="\asset\img\icon\logo.png">
+                <img class="payment-ava" src="\asset\img\image\p05\chuyen khoan.jpg">
+               
                 <div class="payment-detail">
                     <label>
                         <input type="radio" name="payment" value="zaloPay" onclick="showHotelInfo()" checked>
@@ -109,13 +117,13 @@
 
         <!-- Thông Tin Khách Sạn -->
         <div class="hotel-info">
-            <div class="hotel-title">Khách sạn </div>
+            <div class="hotel-title">Homestay </div>
             <div class="hotel-address">Địa chỉ: <strong></strong></div>
             <div class="hotel-checkin">Ngày nhận phòng: <strong></strong></div>
             <div class="hotel-checkout">Ngày trả phòng: <strong></strong></div>
             <div class="hotel-nights">Số đêm: <strong></strong></div>
             <div class="hotel-room">Phòng: <strong></strong></div>
-            <div class="hotel-price">Giá từ khách sạn: <strong></strong></div>
+            <div class="hotel-price">Giá từ : <strong></strong></div>
             <div class="total">Tổng cộng: <strong></strong></div>
         </div>
     </div>

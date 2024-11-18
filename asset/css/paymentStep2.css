@@ -8,10 +8,12 @@ body {
 }
 
 .section-process{
-    width: 75%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%; 
+    
 }
 .container {
     display: flex;
@@ -192,4 +194,17 @@ hr {
 /* Ẩn các chi tiết cho đến khi chọn phương thức thanh toán */
 .hidden {
     display: none;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 10%; /* Tăng kích thước logo */
+    max-width: 150px; /* Đảm bảo logo không quá lớn */
+    height: auto;
+    object-fit: contain;
 }
