@@ -49,20 +49,21 @@
 
     <script>
         // Lấy thông tin từ URL hoặc server
-        const params = new URLSearchParams(window.location.search);
-        
-        document.getElementById('salutation').textContent = params.get('salutation');
-        document.getElementById('fullName').textContent = params.get('fullName');
-        document.getElementById('phoneNumber').textContent = params.get('phoneNumber');
-        document.getElementById('email').textContent = params.get('email');
+    const params = new URLSearchParams(window.location.search);
 
-        // Thông tin phòng (giả lập, cần thay bằng dữ liệu thực tế)
-        document.getElementById('hotelName').textContent = 'Homestay4U'; 
-        document.getElementById('hotelAddress').textContent = 'Mai Chau,Hoa Binh';
-        document.getElementById('checkInDate').textContent = '01/12/2024';
-        document.getElementById('checkOutDate').textContent = '03/12/2024';
-        document.getElementById('numberOfNights').textContent = '2';
-        document.getElementById('roomDetails').textContent = 'Phòng Deluxe King Size';
+// Cập nhật thông tin người dùng
+document.getElementById('salutation').textContent = params.get('salutation');
+document.getElementById('fullName').textContent = params.get('fullName');
+document.getElementById('phoneNumber').textContent = params.get('phoneNumber');
+document.getElementById('email').textContent = params.get('email');
+
+// Thông tin phòng (giả lập, cần thay bằng dữ liệu thực tế)
+document.getElementById('hotelName').textContent = 'Homestay4U'; 
+document.getElementById('hotelAddress').textContent = 'Mai Chau, Hoa Binh';
+document.getElementById('checkInDate').textContent = '10/10/2024';
+document.getElementById('checkOutDate').textContent = '11/10/2024';
+document.getElementById('numberOfNights').textContent = '1';
+document.getElementById('roomDetails').textContent = 'Phòng Deluxe King Size';
     </script>
 </body>
 </html>

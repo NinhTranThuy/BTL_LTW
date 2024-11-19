@@ -7,24 +7,21 @@
     <link rel="stylesheet" href="../asset/css/datphong.css">
 </head>
 <body>
-    <!-- Step Indicator -->
-    <div class="step-indicator">
-        <div class="step step-active">
-            <div class="step-number">1</div>
-            <div class="step-text">Đặt</div>
+    <header>
+        <div class="header">
+            <img class="logo" src="/asset/img/icon/logo.png" alt="Logo">
+            <nav>
+                <div class="left-nav">
+                    <ul>
+                        <li class="hover-effect"><a href="#">Trang chủ</a></li>
+                        <li class="hover-effect"><a href="#">Blog</a></li>
+                        <li class="hover-effect"><a href="#">Về chúng tôi</a></li>
+                    </ul>
+                </div>
+        </nav>
         </div>
-        <div class="step-line"></div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <div class="step-text">Thanh toán</div>
-        </div>
-        <div class="step-line"></div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <div class="step-text">Gửi phiếu xác nhận</div>
-        </div>
-    </div>
-
+    </header>
+   
     <!-- Booking Form and Summary -->
     <div class="container">
         <div class="booking-form">
@@ -46,22 +43,50 @@
                 <label for="email">Email *</label>
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 
-                <button type="submit" class="submit-button">Tiếp tục</button>
+                <button type="button" class="submit-button" onclick="submitButtonOnClick()">Tiếp tục</button>
             </form>
         </div>
         
         <div class="booking-summary">
-            <img src="../asset/img/image/p03/p03.jpg" class="hotel-image" >
-            <h3>Khách sạn </h3>
+            <img src="../asset/img/image/p04/p04-1.jpg" class="hotel-image" >
+        
+            <h3>Mai Chau Homestay</h3>
           
-            <p>Địa chỉ:</p>
-            <p>Ngày nhận phòng: </p>
-            <p>Ngày trả phòng: </p>
-            <p>Số đêm: </p>
+            <p>Địa chỉ:Mai Chau,Hoa Binh</p>
+            <p>Ngày nhận phòng:10/10/2024 </p>
+            <p>Ngày trả phòng:11/10/2024 </p>
+            <p>Số đêm:1 </p>
             <div class="room-details">
                 <p>Phòng: </p>
             </div>
         </div>
     </div>
+    <script>
+             function submitButtonOnClick() {
+        // Lấy dữ liệu từ các trường nhập
+        const salutation = document.getElementById('salutation').value;
+        const fullName = document.getElementById('fullName').value.trim();
+        const phoneNumber = document.getElementById('phoneNumber').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        // Kiểm tra dữ liệu hợp lệ
+        if (!fullName || !phoneNumber || !email) {
+            alert('Vui lòng điền đầy đủ thông tin!');
+            return;
+        }
+
+        // Tạo URL query parameters để truyền thông tin qua trang xác nhận
+        const queryParams = new URLSearchParams({
+            salutation,
+            fullName,
+            phoneNumber,
+            email
+        });
+
+        // Điều hướng đến trang xác nhận
+        window.location.href = `xacnhan.html?${queryParams.toString()}`;
+    }
+    </script>
+
 </body>
 </html>
