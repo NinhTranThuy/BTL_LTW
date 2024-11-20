@@ -196,96 +196,7 @@ input{
     height: 30px;
     background-color: #171717;
 }
-/* Select Date */
-.search-date{
-    flex:1;
-    padding:5px;
-}
 
-fieldset {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 30%;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-fieldset button{
-    flex:1;
-    border: none;
-    border-radius: 10px;
-    background-color: transparent;
-    cursor: pointer;
-    display: flex;
-    align-items: center;   
-    width: auto;
-    padding:5px;
-}
-
-.btn-search span{
-    font-size: 12px;
-}
-
-.btn-search img{
-    width: 25px;
-    height: auto;
-    margin: 10px;
-}
-
-.search-date button .btn-date{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-}
-
-.search-date .fill-date{
-    font-size: 14px;
-    font-weight: bold; 
-    color: #a3a3a3;
-    display: block;
-}
-
-.search-date input{
-    display: none;
-    border: none;
-    background-color: transparent;
-    
-}
-
-/* seach volume */
-.search-volume{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    padding:5px;
-    border-radius: 10px;
-}
-
-.search-volume:hover{
-    background-color:#f2f2f1;
-}
-.search-volume button{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    text-align: start;
-    width: 100%;
-    border: none;
-    background-color: transparent;
-}
-.search-volume button span{
-    display: flex;
-    flex-direction: column;
-}
-
-.search-volume button img{
-    width: 25px;
-    height: auto;
-    margin: 10px;
-}
 /* button search */
 .button-search{
     display: flex;
@@ -459,7 +370,7 @@ section .container {
                 margin: 0;
             }
 
-            .price #cost{
+            .price #cost{a
                 font-size: 20px;
                 font-weight: bold;
                 margin: 0;
